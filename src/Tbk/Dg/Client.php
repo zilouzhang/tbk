@@ -55,7 +55,17 @@ class Client extends BaseClient
         $res = $this->httpPost('taobao.tbk.dg.material.optional', $params);
         return $res;
     }
-
+    /**
+     * taobao.tbk.dg.material.optional.upgrade (淘宝客-推广者-物料搜索升级版)
+     * @line https://open.taobao.com/api.htm?docId=64759&docType=2&scopeId=27939
+     * @param array $params
+     * @return array|mixed|\SimpleXMLElement|string
+     */
+    public function materialOptionalUpgrade(array $params)
+    {
+        $res = $this->httpPost('taobao.tbk.dg.material.optional.upgrade', $params);
+        return $res;
+    }
     /**
      * taobao.tbk.sc.newuser.order.sum (淘宝客-推广者-拉新活动对应数据查询)
      * @line https://open.taobao.com/api.htm?docId=36836&docType=2

@@ -68,7 +68,17 @@ class Client extends BaseClient
         $res = $this->httpPost('taobao.tbk.item.info.get', $params);
         return $res;
     }
-
+    /**
+     * taobao.tbk.item.info.upgrade.get( 淘宝客-公用-淘宝客商品详情查询升级版（简易版） )
+     * @line https://open.taobao.com/api.htm?docId=24518&docType=2&scopeId=16189
+     * @param array $params
+     * @return array|mixed|\SimpleXMLElement|string
+     */
+    public function getTbkItemInfoUpgrade(array $params)
+    {
+        $res = $this->httpPost('taobao.tbk.item.info.upgrade.get', $params);
+        return $res;
+    }
     /**
      * taobao.tbk.item.guess.like (淘宝客商品猜你喜欢)
      * @line http://open.taobao.com/docs/api.htm?apiId=29528&docType=2
